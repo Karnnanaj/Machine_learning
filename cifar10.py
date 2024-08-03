@@ -1,3 +1,5 @@
+# color image classification algorithm with cifar10 dataset
+
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']  = '2'
 
@@ -5,7 +7,7 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers, regularizers
 from tensorflow.keras.datasets import cifar10
-from tensorflow.keras.callbacks import EarlyStopping
+# from tensorflow.keras.callbacks import EarlyStopping
 
 physical_devices = tf.config.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
@@ -72,12 +74,14 @@ model.compile(
     metrics=["accuracy"],
 )
 
-# early_stopping = EarlyStopping(
-#     monitor='val_accuracy',
-#     patience=20, # Number of epochs with no improvement after which training will be stopped
-#     restore_best_weights=True, # Restore model weights from the epoch with the best value of the monitored quantity
-#     verbose=1
-# )
+"""
+early_stopping = EarlyStopping(
+    monitor='val_accuracy',
+    patience=20, # Number of epochs with no improvement after which training will be stopped
+    restore_best_weights=True, # Restore model weights from the epoch with the best value of the monitored quantity
+    verbose=1
+)
+"""
 
 model.fit(x_train, y_train,
           batch_size=64,
