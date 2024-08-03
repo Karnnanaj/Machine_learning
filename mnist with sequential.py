@@ -1,4 +1,4 @@
-# grayscale image recognition with mnist dataset
+# grayscale image recognition model with mnist dataset
 # runs with sequential API, which supports only one input and one output
 # the input image is flattened to an array
 

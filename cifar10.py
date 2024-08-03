@@ -1,4 +1,4 @@
-# color image classification algorithm with cifar10 dataset
+# color image classification model with cifar10 dataset
 
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']  = '2'

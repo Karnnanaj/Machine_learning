@@ -1,4 +1,4 @@
-# grayscale image recognition with mnist dataset
+# grayscale image recognition model with mnist dataset
 # runs with functional API, which is more flexible
 # the input image dimensions are preserved within the neural network
 
