@@ -21,21 +21,22 @@ x_train = x_train.astype("float32") / 255.0
 x_test = x_test.astype("float32") / 255.0
 
 
-##old model definition
-# model = keras.Sequential(
-#     [
-#         keras.Input(shape=(32, 32, 3)),
-#         layers.Conv2D(32, 4, padding='valid', activation='relu'),
-#         layers.MaxPooling2D(pool_size=(2,2)),
-#         layers.Conv2D(64, 4, activation='relu'),
-#         layers.Flatten(),
-#         layers.Dense(64, activation='relu'),
-#         layers.Dense(10),
-#     ]
-# )
-#
-# print(model.summary())
+"""
+#old model definition
+model = keras.Sequential(
+    [
+        keras.Input(shape=(32, 32, 3)),
+        layers.Conv2D(32, 4, padding='valid', activation='relu'),
+        layers.MaxPooling2D(pool_size=(2,2)),
+        layers.Conv2D(64, 4, activation='relu'),
+        layers.Flatten(),
+        layers.Dense(64, activation='relu'),
+        layers.Dense(10),
+    ]
+)
 
+print(model.summary())
+"""
 def my_model(kernel_regularizer=None):
         inputs = keras.Input(shape=(32, 32, 3))
         x = layers.Conv2D(
